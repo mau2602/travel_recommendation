@@ -10,7 +10,7 @@
 <body>
     <nav>
         <ul class="left-menu">
-            <li><a href="home.html">Home</a></li>
+            <li><a href="travel_recommendation.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -19,24 +19,26 @@
         </div>
         <div class="right-menu">
             <form class="search-form" action="/search" method="get">
-                <input type="text" name="query" placeholder="Search...">
-                <button id='searchBtn' onclick="getData()" type="submit">Search</button>
+                <input id="searchInput" type="text" name="query" placeholder="Search...">
+                <button id='searchBtn'  type="submit">Search</button>
                 <button type="reset">Reset</button>
             </form>
         </div>
     </nav>
-    <div id="div-title">
-        <p id="title-text">MAKE<br>IT<br>HAPPEN</p>
-    </div>
-    <div id="home-text-div">
-        <p id="home-text">Just by being here you are one step closer to make that dream trip come true. Take a look at our destinations, accomodations, excursions and offers and let's make it happen!.
-        <button class="book-now">BOOK NOW!</button>
-    </div>
-    <div class="social-buttons">
-        <a href="https://www.facebook.com" target="_blank"><img src="./img/face-vector.png" alt="Facebook"></a>
-        <a href="https://www.twitter.com" target="_blank"><img src="./img/tw-vector.webp" alt="Twitter"></a>
-        <a href="https://www.instagram.com" target="_blank"><img src="./img/insta-vector.webp" alt="Instagram"></a>
-        <a href="https://www.youtube.com" target="_blank"><img src="./img/youtube-vector.webp" alt="Youtube"></a>
+    <div id="container">
+        <div id="div-title">
+            <p id="title-text">MAKE<br>IT<br>HAPPEN</p>
+        </div>
+        <div id="home-text-div">
+            <p id="home-text">Just by being here you are one step closer to make that dream trip come true. Take a look at our destinations, accomodations, excursions and offers and let's make it happen!.
+            <button class="book-now" onclick="getData()">BOOK NOW!</button>
+        </div>
+        <div class="social-buttons">
+            <a href="https://www.facebook.com" target="_blank"><img src="./img/face-vector.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="./img/tw-vector.webp" alt="Twitter"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="./img/insta-vector.webp" alt="Instagram"></a>
+            <a href="https://www.youtube.com" target="_blank"><img src="./img/youtube-vector.webp" alt="Youtube"></a>
+        </div>
     </div>
     <script src="travel_recommendation.js"></script>
 </body>
