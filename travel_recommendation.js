@@ -1,4 +1,5 @@
 const url = "./travel_recommendation_api.json"
+let elemDiv = document.getElementById('elemDiv')
 const beaches = ["beach", "beaches"] 
 const countries = ["country", "countries"]
 const temples = ["temple", "temples"]
@@ -10,7 +11,7 @@ function finding(userInput){
     } else if (countries.find(element => element == userInput)){
         return "countries"
     } else if(temples.find(element => element == userInput)){
-        return userInput
+        return "temples"
     } else {
         alert("Not found. Please try a different search.")
     }
@@ -33,7 +34,7 @@ function getData(element){
             .then(data => {
                 let container = document.getElementById('container')
                 container.innerHTML = ''
-                let elemDiv = document.getElementById('elemDiv')
+                
                 elemDiv.innerHTML = `<p class="pTitle">Visit ${data[element][0].name}</p>
                                         <br><br>
                                         <img src="${data[element][0].imageUrl}"
@@ -52,3 +53,14 @@ function getData(element){
                 console.error('Error fetching data: ', error);
             });
 }
+function resetSearch(){
+    console.log('funca')
+    elemDiv.innerText = ''
+    elemDiv.innerText = "Please start a new search or click the HOME button to go back to the main page"
+}
+
+document.getElementById('resetSearch').addEventListener('click', () =>{
+    if(elemDiv.innerText != ''){
+        resetSearch()
+    }
+})

@@ -237,6 +237,8 @@ input[type="text"], input[type="email"], textarea {
 }
 
 #elemDiv {
+    color: white;
+    font-size: 20px;
     padding: 20px;
     display: flex;
     flex-direction: column;
