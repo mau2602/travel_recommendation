@@ -32,10 +32,21 @@ function getData(element){
             .then(response => response.json())
             .then(data => {
                 let container = document.getElementById('container')
-                let dataHTML = data[element].forEach(element => `<h1>Visit ${element.name}!</h1>
-                                                                 <p>${element.description}</p>`
-            )
-            container.innerHTML = dataHTML
+                container.innerHTML = ''
+                let elemDiv = document.getElementById('elemDiv')
+                elemDiv.innerHTML = `<p class="pTitle">Visit ${data[element][0].name}</p>
+                                        <br><br>
+                                        <img src="${data[element][0].imageUrl}"
+                                        <br><br>
+                                        <p class="pRec">${data[element][0].description}</p>
+                                        <br><br>
+                                        <p class="pTitle">Visit ${data[element][1].name}</p>
+                                        <br><br>
+                                        <img id="img" src="${data[element][1].imageUrl}"
+                                        <br><br>
+                                        <p class="pRec">${data[element][1].description}</p>
+                                        <br><br>
+                                        <br><br>`                                                               
         })
             .catch(error => {
                 console.error('Error fetching data: ', error);
