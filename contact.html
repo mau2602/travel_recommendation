@@ -8,6 +8,7 @@
     <title>Syracuse Travel</title>
 </head>
 <body>
+    <div class="container">
     <nav>
         <ul class="left-menu">
             <li><a href="travel_recommendation.html">Home</a></li>
@@ -18,6 +19,23 @@
             <p id=logo-text>Syracuse Travel</p>
         </div>
     </nav>
+    <div class="contact-div">
+        <div class="contact-title">
+            <h1 id="title-h1">CONTACT US</h1>
+        </div>
+        <div class="contact-form">
+            <form>
+                <label for="name">Name    </label>
+                <input type="text" id="name" name="name">
+                <br><br>
+                <label for="email">Email    </label>
+                <input type="email" id="email" name="email">
+                <br><br>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="20" cols="50"></textarea>
+                <br><br>
+                <input type="submit" value="Send">
+    </div>
     <div class="social-buttons">
         <a href="https://www.facebook.com" target="_blank"><img src="./img/face-vector.png" alt="Facebook"></a>
         <a href="https://www.twitter.com" target="_blank"><img src="./img/tw-vector.webp" alt="Twitter"></a>
@@ -25,5 +43,6 @@
         <a href="https://www.youtube.com" target="_blank"><img src="./img/youtube-vector.webp" alt="Youtube"></a>
     </div>
     <script src="travel_recommendation.js"></script>
+</div>
 </body>
 </html>
